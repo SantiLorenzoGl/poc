@@ -1,4 +1,3 @@
-import Script from 'next/script'
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -17,6 +16,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <script async src="./sample-app-js/Config.js"></script>
+      <script async src="./core-sdk/FaceTecSDK.js/FaceTecSDK.js"></script>
+      <script async src="./sample-app-js/processors/AuthenticateProcessor.js"></script>
+      <script async src="./sample-app-js/processors/EnrollmentProcessor.js"></script>
+      <script async src="./sample-app-js/processors/LivenessCheckProcessor.js"></script>
+      <script async src="./sample-app-js/processors/PhotoIDMatchProcessor.js"></script>
+      <script async src="./sample-app-js/processors/PhotoIDScanProcessor.js"></script>
+      <script async src="./sample-app-js/utilities/SampleAppUIFunctions.js"></script>
+      <script async src="./sample-app-js/utilities/ThemeHelpers.js"></script>
+      <script async src="./sample-app-js/utilities/AdditionalScreens.js"></script>
+      <script async src="./sample-app-js/utilities/SoundFileUtilities.js"></script>
+      <script async src="./sample-app-js/sampleAppController.js?v1"></script>
       <body className={inter.className}>{children}</body>
     </html>
   );
