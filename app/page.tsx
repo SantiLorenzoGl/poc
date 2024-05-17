@@ -17,7 +17,9 @@ export default function Home() {
           <CardTitle>POC Facetec</CardTitle>
         </CardHeader>
         <CardContent className="grid gap-4">
-          <Redirect />
+          <React.Suspense fallback={<p>loading...</p>}>
+            <Redirect />
+          </React.Suspense>
           <LivenessCheck />
         </CardContent>
       </Card>
