@@ -36,8 +36,8 @@ var AdditionalScreens = /** @class */ (function () {
         document.getElementById("additional-screen").style.opacity = "0";
         document.getElementById("additional-screen").style.display = "flex";
         (0, SampleAppUIFunctions)(".wrapping-box-container").fadeOut(1);
-        (0, SampleAppUIFunctions)("#theme-transition-overlay").fadeOut(200);
-        (0, SampleAppUIFunctions)("#additional-screen").fadeOut(200, function () {
+        (0, SampleAppUIFunctions)("#theme-transition-overlay").fadeOut(10);
+        (0, SampleAppUIFunctions)("#additional-screen").fadeOut(10, function () {
             (0, SampleAppUIFunctions)("#" + AdditionalScreens.elementToCopyStylesFrom).fadeOut(1);
             (0, SampleAppUIFunctions)("#additional-screen").fadeIn(700, function () {
                 (0, SampleAppUIFunctions)(".wrapping-box-container").show();

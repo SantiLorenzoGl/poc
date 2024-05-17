@@ -1,5 +1,7 @@
 "use client"
 
+import { Button } from "@/components/ui/button";
+import { Icons } from "@/components/ui/icons";
 import { useRouter, useSearchParams } from "next/navigation";
 
 export default function Redirect() {
@@ -15,11 +17,28 @@ export default function Redirect() {
   }
 
   return (
-    <button
-      id="liveness-button"
-      onClick={handleClick}
-    >
-      Redirect with credentials
-    </button>
+
+    <div className=" flex items-center space-x-4 rounded-md border p-4">
+      <div className="flex-1 space-y-1">
+        <p className="text-sm text-muted-foreground">
+          Navegar a la url provista mediante query params.
+        </p>
+        {!redirectURL && (
+          <div className="flex">
+            <Icons.alertOutlined />
+            <p className="text-ellipsis text-xs leading-4 tracking-[0.24px] text-neutral-red">
+              URL de redireccion no provista
+            </p>
+          </div>
+        )}
+      </div>
+      <Button
+        disabled={!redirectURL}
+        id="liveness-button"
+        onClick={handleClick}
+      >
+        Redirect
+      </Button>
+    </div>
   );
 }
