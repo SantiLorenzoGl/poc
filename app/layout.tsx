@@ -16,6 +16,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script type="text/javascript" src="./sample-app-js/Config.js"></script>
+        <script src="./core-sdk/FaceTecSDK.js/FaceTecSDK.js"></script>
+        <script type="text/javascript" src="./sample-app-js/processors/AuthenticateProcessor.js"></script>
+        <script type="text/javascript" src="./sample-app-js/processors/EnrollmentProcessor.js"></script>
+        <script type="text/javascript" src="./sample-app-js/processors/LivenessCheckProcessor.js"></script>
+        <script type="text/javascript" src="./sample-app-js/processors/PhotoIDMatchProcessor.js"></script>
+        <script type="text/javascript" src="./sample-app-js/processors/PhotoIDScanProcessor.js"></script>
+        <script type="text/javascript" src="./sample-app-js/utilities/SampleAppUIFunctions.js"></script>
+        <script type="text/javascript" src="./sample-app-js/utilities/ThemeHelpers.js"></script>
+        <script type="text/javascript" src="./sample-app-js/utilities/AdditionalScreens.js"></script>
+        <script type="text/javascript" src="./sample-app-js/utilities/SoundFileUtilities.js"></script>
+        <script type="text/javascript" src="./sample-app-js/sampleAppController.js?v1"></script>
+      </head>
+
       <body className={inter.className}>{children}</body>
     </html>
   );
