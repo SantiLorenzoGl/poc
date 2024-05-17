@@ -20,27 +20,29 @@ export default function Redirect() {
   }
 
   return (
-    <div className=" flex items-center space-x-4 rounded-md border p-4">
-      <div className="flex-1 space-y-1">
-        <p className="text-sm text-muted-foreground">
-          Navegar a la url provista mediante query params.
-        </p>
-        {!redirectURL && (
-          <div className="flex">
-            <Icons.alertOutlined />
-            <p className="text-ellipsis text-xs leading-4 tracking-[0.24px] text-neutral-red">
-              URL de redireccion no provista.
-            </p>
-          </div>
-        )}
+    <div className=" flex flex-col items-start rounded-md border p-4 gap-2">
+      <div className="flex items-center gap-4">
+        <div className="flex-1 space-y-1">
+          <p className="text-sm text-muted-foreground">
+            Navegar a la url provista mediante query params.
+          </p>
+        </div>
+        <Button
+          disabled={!redirectURL || loading}
+          id="liveness-button"
+          onClick={handleClick}
+        >
+          Redirect
+        </Button>
       </div>
-      <Button
-        disabled={!redirectURL || loading}
-        id="liveness-button"
-        onClick={handleClick}
-      >
-        Redirect
-      </Button>
+      {!redirectURL && (
+        <div className="flex">
+          <Icons.alertOutlined />
+          <p className=" text-ellipsis text-xs leading-4 tracking-[0.24px] text-neutral-red">
+            URL de redireccion no provista.
+          </p>
+        </div>
+      )}
     </div>
   );
 }
