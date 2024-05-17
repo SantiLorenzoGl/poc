@@ -20,7 +20,7 @@ export default function Redirect() {
   }
 
   return (
-    <div className=" flex flex-col items-start rounded-md border p-4 gap-2">
+    <div className=" flex flex-col items-start rounded-md border p-4 gap-1">
       <div className="flex items-center gap-4">
         <div className="flex-1 space-y-1">
           <p className="text-sm text-muted-foreground">
